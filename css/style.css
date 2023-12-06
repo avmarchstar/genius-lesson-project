@@ -63,6 +63,14 @@ body {
   border: 1px solid gray; /*delete*/
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 24px;
@@ -70,27 +78,21 @@ body {
   max-width: 1288px;
 }
 
-ul {
-  list-style-type: none;
-}
-
-a {
-  color: var(--color-primary-light);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--color-primary-green);
-  /* font-weight: 600; */
-}
 
 .section {
   padding: 48px 0;
 }
 
 /* Header */
+
+.header {
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 100%;
+}
+
 .header-container {
-  background-color: darkgrey; /* delete */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,6 +117,16 @@ a:hover {
   display: flex;
 }
 
+.link{
+  color: var(--color-primary-light);
+      transition-duration: .3s;
+      transition-property: color;
+}
+
+.link:hover {
+  color: var(--color-primary-green);
+}
+
 /* Button */
 .button {
   color: var(--color-primary-light);
@@ -123,7 +135,8 @@ a:hover {
   background-color: var(--color-primary-green);
   cursor: pointer;
   padding: 16px 32px;
-  
+  transition-duration: .3s;
+  transition-property: background-color;
 }
 
 .button:hover {
@@ -135,7 +148,13 @@ a:hover {
 
 .hero-section {
   padding: 272px 0;
-  background-image: url('../src/img/hero-background.jpg');
+  background-image: linear-gradient(
+      103deg,
+      rgba(18, 18, 17, 0.78) 2.03%,
+      rgba(18, 18, 17, 0.6) 58.46%,
+      rgba(18, 18, 17, 0) 90.36%
+    ),
+    url('../src/img/hero-background.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -170,8 +189,8 @@ a:hover {
   position: absolute;
   left: -10000px;
   top: auto;
-  width: 1px;
-  height: 1px;
+  width: 0px;
+  height: 0px;
   overflow: hidden;
 }
 
@@ -190,7 +209,7 @@ a:hover {
 }
 
 .section-title {
-  font-size: 64px;
+  font-size: 63px;
   line-height: 1.3;
   font-weight: 900;
 }
@@ -199,9 +218,9 @@ a:hover {
   text-align: center;
 }
 
-.traditions-title {
+/* .traditions-title {
   margin-bottom: 42px;
-}
+} */
 
 .tradition-container {
   display: flex;
@@ -334,6 +353,10 @@ a:hover {
   gap: 32px;
 }
 
+.formats-carousel-button.next{
+  transform: rotate(180deg);
+}
+
 /* Contacts */
 
 .contacts-title {
@@ -353,6 +376,10 @@ a:hover {
 
 .contacts-section {
   padding-bottom: 96px;
+}
+
+.contacts-text{
+  margin-bottom: 42px;
 }
 
 /* Footer */
@@ -430,10 +457,9 @@ address {
   flex-grow: 1;
 }
 
-
 /* Modal */
 
-.backdrop{
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -443,25 +469,87 @@ address {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity .3s, visibility .3s;
 }
 
-.modal{
+.modal {
   position: relative;
-  width: 880px;
-  height: 880px;
+  width: 100%;
+  height: 100%;
+  max-width: 880px;
+  max-height: 880px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
+  padding: 128px;
+  overflow: auto;
 }
 
-.modal-button-close{
+.modal-button-close {
   position: absolute;
   top: 40px;
   right: 40px;
   flex-shrink: 0;
 }
 
-.backdrop.is-hidden{
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+/* FORM */
+
+/* .form-label{
+  display: none;
+} */
+
+.form-input{
+  width: 100%;
+  padding: 16px 42px;
+  color: var(--color-secondary-dark);
+  font-style: 16px;
+  line-height: 1.5;
+  border-radius: 8px;
+  border: 1px solid var(--color-secondary-dark);
+  background-color: transparent;
+  margin-bottom: 32px;
+}
+
+.form-input::placeholder{
+  color: var(--color-secondary-dark);
+  
+}
+
+.form-input:focus{
+  border: 1px solid var(--color-primary-green);
+  color: var(--color-primary-dark);
+  outline: none;
+}
+
+.form-text{
+  font-family: Roboto;
+  color: var(--color-secondary-green);
+  text-align: center;
+}
+
+.form-button{
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.form-terms{
+  color: var(--color-primary-dark);
+text-align: center;
+font-family: Gilroy;
+font-size: 12px;
+font-weight: 500;
+line-height: 1.17; 
+width: 213px;
+margin: 0 auto;
+}
+
+.form-terms-link{
+  color: var(--color-primary-dark);
+  text-decoration: underline;
 }
