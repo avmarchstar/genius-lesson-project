@@ -25,6 +25,7 @@
     align-items: center;
 
     @media screen and (min-width: $bp-tablet) {
+      align-items: unset;
       gap: 18px;
     }
   }

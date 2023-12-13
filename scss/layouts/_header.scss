@@ -33,11 +33,11 @@
     gap: 40px;
   }
 
-  &__logo{
-    fill: var(--color-primary-light);
-    width: 100px;
-    height: auto;
-  }
+  // &__logo{
+  //   fill: var(--color-primary-light);
+  //   width: 114px;
+  //   height: auto;
+  // }
 
   &__button {
     display: none;
@@ -59,3 +59,4 @@
     }
   }
 }
+

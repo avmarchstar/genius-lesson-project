@@ -1,4 +1,4 @@
- /* Fonts */
+/* Fonts */
 @import './utils/fonts';
 
 @import './utils/variables';
@@ -13,25 +13,19 @@
 
 /* Button */
 
-
-
 @import './layouts/hero-section';
-
+@import './components/logo';
 @import './layouts/advantages-section';
 @import './layouts/section';
 @import './layouts/traditions-section';
 
-
 @import './layouts/chefs-section';
 @import './components/chef-card';
-
 
 @import './layouts/formats-section';
 @import './components/formats-cards';
 
-
 @import './components/carousel';
-
 
 @import './layouts/contact-section';
 

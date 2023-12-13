@@ -1,6 +1,6 @@
 const modal = document.querySelector('.backdrop');
 
-const screenWidth = window.screen.width
+const screenWidth = window.window.innerWidth;
 const modalBtnOpens = document.querySelectorAll('.modal-button-open');
 let modalBtnOpen = modalBtnOpens[0];
 if (screenWidth < 1280) {

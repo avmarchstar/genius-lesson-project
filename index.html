@@ -15,7 +15,12 @@
       <div class="container">
         <div class="header__container">
           <nav class="header__nav">
-            <a href="index.html"> <img src="src/img/logo.svg" alt="" /></a>
+            <!-- <a class="header__logo logo" href="index.html"> <img src="src/img/logo.svg" alt="" /></a> -->
+            <a class="header__logo logo" href="index.html">
+              <svg class="logo-icon" width="100%" height="auto">
+                <use href="./src/img/symbol-defs.svg#icon-logo"></use>
+              </svg>
+            </a>
             <ul class="header__menu">
               <li><a class="link" href="#traditions-section">Наші традиції</a></li>
               <li><a class="link" href="#chefs-section">Шеф-кухарі</a></li>
@@ -32,23 +37,41 @@
             </svg>
           </button>
           <div class="mobile-menu">
-            <button
-              class="mobile-menu__mobile-button-close mobile-button-close button-close"
-              type="button">
-                       <svg width="16px" height="16px">
-                <use href="./src/img/symbol-defs.svg#icon-close"></use>
-              </svg>
-            </button>
-          <nav class="mobile-menu__nav">
-            <a href="index.html"> <img class="mobile-menu__logo" src="src/img/logo.svg" alt="" /></a>
-            <ul class="mobile-menu__menu">
-              <li><a class="mobile-menu__link" href="#traditions-section">Наші традиції</a></li>
-              <li><a class="mobile-menu__link" href="#chefs-section">Шеф-кухарі</a></li>
-              <li><a class="mobile-menu__link" href="#formats-section">Формати</a></li>
-              <li><a class="mobile-menu__link" href="#contacts-section">Контакти</a></li>
-            </ul>
-          </nav>
-
+            <div class="mobile-menu__container">
+              <button
+                class="mobile-menu__mobile-button-close mobile-button-close button-close"
+                type="button"
+              >
+                <svg width="16px" height="16px">
+                  <use href="./src/img/symbol-defs.svg#icon-close"></use>
+                </svg>
+              </button>
+              <nav class="mobile-menu__nav">
+                <a class="logo mobile-menu__logo" href="index.html">
+                  <svg class="logo-icon" width="100%" height="auto">
+                    <use href="./src/img/symbol-defs.svg#icon-logo"></use>
+                  </svg>
+                </a>
+                <ul class="mobile-menu__list">
+                  <li>
+                    <a class="mobile-menu__link link" href="#traditions-section">
+                      Наші традиції</a
+                    >
+                  </li>
+                  <li>
+                    <a class="mobile-menu__link link" href="#chefs-section">Шеф-кухарі</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu__link link" href="#formats-section">Формати</a>
+                  </li>
+                  <li>
+                    <a class="mobile-menu__link link" href="#contacts-section"
+                      >Контакти</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
@@ -168,7 +191,7 @@
           </h2>
           <div class="formats-section__slider">
             <button type="button" class="carousel-button prev">
-              <svg  width="16px" height="16px">
+              <svg width="16px" height="16px">
                 <use href="./src/img/symbol-defs.svg#icon-Arrow-1"></use>
               </svg>
             </button>
@@ -291,10 +314,10 @@
                 </li>
               </ul>
               <div class="pagination">
-                <span type="button" class="pagination__button"></span>
-                <span type="button" class="pagination__button"></span>
-                <span type="button" class="pagination__button"></span>
-                <span type="button" class="pagination__button"></span>
+                <span class="pagination__button"></span>
+                <span class="pagination__button"></span>
+                <span class="pagination__button"></span>
+                <span class="pagination__button"></span>
               </div>
             </div>
             <button type="button" class="carousel-button next">
@@ -305,7 +328,7 @@
           </div>
         </div>
       </section>
-      <section class="contact-section section="contacts-section">
+      <section class="contact-section section" id="contacts-section">
         <div class="container">
           <div class="contact-section__container">
             <div class="contacts-form">
@@ -325,11 +348,9 @@
                     id="user-name"
                     placeholder="Ім’я"
                     minlength="2"
-                    ;
                     maxlength="20"
-                    ;
                     pattern="^[Є-ЯҐа-їґ]+"
-                    required;
+                    required
                   />
                 </div>
                 <div class="input">
@@ -341,7 +362,7 @@
                     id="user-tel"
                     placeholder="Телефон"
                     pattern="^\+[0-9]{12}"
-                    required;
+                    required
                   />
                 </div>
                 <div class="input">
@@ -355,7 +376,7 @@
                     id="user-email"
                     placeholder="Електронна пошта"
                     pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-                    required;
+                    required
                   />
                 </div>
                 <button class="button" type="submit">Замовити дзвінок</button>
@@ -366,14 +387,13 @@
               </div>
             </div>
 
-              <iframe
+            <iframe
               class="contact-section__map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1640531314047!2d30.491233500000003!3d50.4566697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2sSichovykh%20Striltsiv%20St%2C%2054%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1701531060667!5m2!1sen!2sua"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
-
           </div>
         </div>
       </section>
@@ -382,8 +402,14 @@
       <div class="container">
         <div class="footer__container">
           <nav class="footer__nav">
-            <div class="footer__logo">
-              <a href="index.html"> <img src="src/img/logo.svg" alt="" /></a>
+            <div class="footer__logo logo">
+              <a href="index.html">
+                <a class="header__logo logo" href="index.html">
+                  <svg class="logo-icon" width="100%" height="auto">
+                    <use href="./src/img/symbol-defs.svg#icon-logo"></use>
+                  </svg>
+                </a>
+              </a>
             </div>
             <ul class="footer__menu">
               <li><a class="link" href="">Наші традиції</a></li>
@@ -405,7 +431,10 @@
                   class="link"
                   href="https://maps.app.goo.gl/xGmiZQGsuYZssMVt7"
                   target="_blank"
-                  ><p class=" address__link-text">Україна, м. Київ,<br> вул. Січових Стрільців 54</p></a
+                  ><p class="address__link-text">
+                    Україна, м. Київ,<br />
+                    вул. Січових Стрільців 54
+                  </p></a
                 >
               </li>
               <li>
@@ -435,9 +464,9 @@
     <div class="backdrop is-hidden">
       <div class="modal">
         <button class="button-close modal__button-close modal-button-close" type="button">
-                <svg width="16px" height="16px">
-                <use href="./src/img/symbol-defs.svg#icon-close"></use>
-              </svg>
+          <svg width="16px" height="16px">
+            <use href="./src/img/symbol-defs.svg#icon-close"></use>
+          </svg>
         </button>
 
         <h2 class="section__title">Замовити дзвінок</h2>
@@ -452,11 +481,9 @@
             id="user-name-modal"
             placeholder="Ім’я"
             minlength="2"
-            ;
             maxlength="20"
-            ;
             pattern="^[Є-ЯҐа-їґ]+"
-            required;
+            required
           />
           <label class="input__label hidden" for="user-tel">Телефон</label>
           <input
@@ -466,7 +493,7 @@
             id="user-tel-modal"
             placeholder="Телефон"
             pattern="^\+[0-9]{12}"
-            required;
+            required
           />
           <label class="input__label hidden" for="user-email">Електронна пошта</label>
           <input
@@ -476,7 +503,7 @@
             id="user-email-modal"
             placeholder="Електронна пошта"
             pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-            required;
+            required
           />
           <button class="button" type="submit">Замовити дзвінок</button>
         </form>
