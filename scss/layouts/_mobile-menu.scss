@@ -12,6 +12,17 @@
 
   &__container {
     position: relative;
+        &::after {
+    position: absolute;
+    background-image: url('../src/img/bread-and-text.png');
+    background-repeat: no-repeat;
+    bottom: 0;
+    right: 0;
+    width: 180px;
+    height: 240px;
+    content: '';
+  }
+    owerflow:hidden;
   }
 
   &.is-open {
@@ -43,7 +54,7 @@
   }
 
   &__link {
-    color: var(--color-primary-dark);
+    color: var(--color-primary-dark); 
 
     &:hover{
         font-weight: 600;
