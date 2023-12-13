@@ -8,6 +8,10 @@
       rgba(18, 18, 17, 0) 90.36%
     ),
     url('src/img/hero-background.jpg');
+    url('../src/img/hero-background.jpg');
+    url('../../src/img/hero-background.jpg');
+    url('./../../src/img/hero-background.jpg');
+    url('../../../src/img/hero-background.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
