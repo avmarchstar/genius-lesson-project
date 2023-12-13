@@ -1,0 +1,22 @@
+.input {
+  &__control {
+    width: 100%;
+    padding: 16px 42px;
+    color: var(--color-secondary-dark);
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 8px;
+    border: 1px solid var(--color-secondary-dark);
+    background-color: transparent;
+
+    &::placeholder {
+      color: var(--color-secondary-dark);
+    }
+
+    &:focus {
+      border: 1px solid var(--color-primary-green);
+      color: var(--color-primary-dark);
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.header {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 100%;
+
+      @media screen and (min-width: $bp-desktop) {
+  top: 32px;
+    }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__menu {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 64px;
+      flex-grow: 1;
+      justify-content: center;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__logo{
+    fill: var(--color-primary-light);
+    width: 100px;
+    height: auto;
+  }
+
+  &__button {
+    display: none;
+    
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__burger {
+    background-color: transparent;
+    border: 0;
+    width: 24px;
+    height: 24px;
+    fill: var(--color-primary-light);
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+}

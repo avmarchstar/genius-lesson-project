@@ -1,0 +1,15 @@
+.terms {
+  color: var(--color-primary-dark);
+  text-align: center;
+  font-family: Gilroy;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.17;
+  width: 213px;
+  margin: 0 auto;
+
+  &__link {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+  }
+}

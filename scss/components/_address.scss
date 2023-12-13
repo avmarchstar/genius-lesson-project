@@ -1,0 +1,52 @@
+.address {
+  font-style: normal;
+
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  &__social-media {
+    display: flex;
+    gap: 22px;
+  }
+  &__social {
+    fill: var(--color-primary-light);
+    width: 32px;
+    height: 32px;
+  }
+
+  &__list,
+  &__info {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 18px;
+    }
+  }
+
+  &__info{
+      gap: 8px;
+  }
+
+  &__copyright {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--color-secondary-dark);
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  &__link-text {
+    text-align: center;
+    @media screen and (min-width: $bp-tablet) {
+      text-align: start;
+    }
+  }
+}

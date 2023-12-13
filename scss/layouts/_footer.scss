@@ -1,0 +1,118 @@
+.footer {
+  background-color: var(--color-primary-dark);
+  background-image: url('../src/img/footer-background-mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 32px 0;
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (min-width: $bp-tablet) {
+    background-image: url('../src/img/footer-background.png');
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 20px;
+      align-items: start;
+    }
+  }
+
+   &__address{
+    gap:8px;
+  }
+
+    &__nav {
+      gap: 16px;
+    }
+    
+  &__address,
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    align-items: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-grow: 1;
+      flex-direction: row;
+      gap: 20px;
+      align-items: unset;
+    }
+  }
+
+ 
+
+  &__logo {
+    height: 100%;
+    width: 72px;
+    @media screen and (min-width: $bp-tablet) {
+      width: 108px;
+    }
+  }
+
+  &__logo,
+  &__menu {
+    flex-grow: 1;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      align-items: start;
+    }
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    bottom: 0;
+  }
+
+  &::before {
+    background-image: url('../src/img/footer-decor-bread-mobile.png');
+    background-repeat: no-repeat;
+    top: 40px;
+    left: 0;
+    width: 92px;
+    height: 196px;
+    content: '';
+
+    @media screen and (min-width: $bp-tablet) {
+      background-image: url('../src/img/footer-decor-bread.png');
+      width: 180px;
+      height: 120px;
+      bottom: 0;
+      top: unset;
+    }
+  }
+
+  &::after {
+    background-image: url('../src/img/footer-decor-breads-mobile.png');
+    width: 112px;
+    height: 120px;
+    right: -10px;
+    bottom: -30px;
+    background-repeat: no-repeat;
+    content: '';
+
+    @media screen and (min-width: $bp-tablet) {
+      background-image: url('../src/img/footer-decor-breads.png');
+      width: 380px;
+      height: 190px;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

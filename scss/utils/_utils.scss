@@ -1,0 +1,15 @@
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+

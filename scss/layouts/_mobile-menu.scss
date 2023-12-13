@@ -1,0 +1,42 @@
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary-light);
+    transform: translateX(100%);
+    transition: transform .5s;
+    
+
+    &.is-open{
+        transform: translateX(0);
+    }
+
+    &__mobile-button-close{
+        position: absolute;
+        top: 16px;
+        right: 24px;
+    }
+
+    &__nav{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 40px;
+    }
+
+    &__list{
+
+
+    }
+
+    &__logo{
+        fill: var(--color-primary-dark);
+    }
+
+}

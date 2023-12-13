@@ -1,0 +1,14 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.form-text {
+  font-family: Roboto;
+  color: var(--color-secondary-green);
+  text-align: center;
+}
+
+
