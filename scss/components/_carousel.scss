@@ -1,6 +1,6 @@
 .carousel-button {
-display: none;
-     @media screen and (min-width: $bp-tablet) {
+  display: none;
+  @media screen and (min-width: $bp-tablet) {
     display: flex;
     width: 44px;
     height: 44px;
@@ -16,9 +16,11 @@ display: none;
       background-color: var(--color-primary-dark);
       fill: var(--color-primary-light);
     }
-  &.next {
-    transform: rotate(180deg);
+    &.next {
+      transform: rotate(180deg);
+    }
+
+  
   }
-  }
-  }
+}
 
